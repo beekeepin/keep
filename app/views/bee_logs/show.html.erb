@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @bee_log.temperature %>
+</p>
+
+<p>
+  <strong>Humidity:</strong>
+  <%= @bee_log.humidity %>
+</p>
+
+<p>
+  <strong>Colony name:</strong>
+  <%= @bee_log.colony_name %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @bee_log.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @bee_log.latitude %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @bee_log.status %>
+</p>
+
+<p>
+  <strong>Monitor data:</strong>
+  <%= @bee_log.monitor_data %>
+</p>
+
+<%= link_to 'Edit', edit_bee_log_path(@bee_log) %> |
+<%= link_to 'Back', bee_logs_path %>

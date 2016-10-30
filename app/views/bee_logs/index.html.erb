@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bee Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Temperature</th>
+      <th>Humidity</th>
+      <th>Colony name</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Status</th>
+      <th>Monitor data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bee_logs.each do |bee_log| %>
+      <tr>
+        <td><%= bee_log.temperature %></td>
+        <td><%= bee_log.humidity %></td>
+        <td><%= bee_log.colony_name %></td>
+        <td><%= bee_log.longitude %></td>
+        <td><%= bee_log.latitude %></td>
+        <td><%= bee_log.status %></td>
+        <td><%= bee_log.monitor_data %></td>
+        <td><%= link_to 'Show', bee_log %></td>
+        <td><%= link_to 'Edit', edit_bee_log_path(bee_log) %></td>
+        <td><%= link_to 'Destroy', bee_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bee log', new_bee_log_path %>

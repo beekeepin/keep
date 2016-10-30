@@ -1,0 +1,1 @@
+json.array! @bee_logs, partial: 'bee_logs/bee_log', as: :bee_log
