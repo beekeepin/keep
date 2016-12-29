@@ -1,0 +1,15 @@
+development:
+  aws_access_key_id: ""
+  aws_secret_access_key: ""
+  region: us-west-2
+  host: s3-us-west-2.amazonaws.com
+  endpoint: https://s3-us-west-2.amazonaws.com
+  fog_directory: ixn-sand
+
+production:
+  aws_access_key_id: <%= ENV["carrierwave_aws_access_key_id"] %>
+  aws_secret_access_key: <%= ENV["carrierwave_aws_secret_access_key"] %>
+  region: <%= ENV["carrierwave_aws_region"] %>
+  host: <%= ENV["carrierwave_aws_host"] %>
+  endpoint: <%= ENV["carrierwave_aws_endpoint"] %>
+  fog_directory: <%= ENV["carrierwave_aws_bucket_name"] %>

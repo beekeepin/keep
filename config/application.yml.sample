@@ -1,0 +1,22 @@
+default: &default
+development:
+  <<: *default
+  carrierwave_aws_access_key_id: ""
+  carrierwave_aws_secret_access_key: ""
+  carrierwave_aws_region: ""
+  carrierwave_aws_host: ""
+  carrierwave_aws_endpoint: ""
+  carrierwave_aws_bucket_name: ""
+sand:
+  <<: *default
+  database_host: ""
+  database_password: ""
+  database_username: ""
+  secret_key_base: ""
+  devise_secret_key: ""
+production:
+  <<: *default
+  database_host: ""
+  database_password: ""
+  database_username: ""
+  secret_key_base: ""
